@@ -1488,3 +1488,283 @@ body {
   }
 }
 
+/* ========================= */
+/* CINEMA PREMIUM ANIMATION */
+/* ========================= */
+
+/* Smooth */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Main cards */
+.movies,
+.movies-one,
+.movies--one,
+.movies-big,
+.start-wrapper,
+.main-text-box {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.8s ease,
+    box-shadow 0.8s ease,
+    border 0.8s ease;
+}
+
+/* Premium glass */
+.movies,
+.movies-one,
+.movies--one,
+.movies-big {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+}
+
+/* Desktop hover only */
+@media (min-width: 992px) {
+
+  .movies:hover,
+  .movies-one:hover,
+  .movies--one:hover,
+  .movies-big:hover {
+    transform: translateY(-10px) scale(1.02);
+
+    box-shadow:
+      0 0 20px rgba(255, 0, 0, 0.35),
+      0 0 50px rgba(255, 0, 0, 0.15);
+
+    border: 1px solid rgba(255, 0, 0, 0.2);
+  }
+
+  /* Images zoom */
+  .movies-pct,
+  .movies-one-pct,
+  .movies--one--pct,
+  .movies-big-pct {
+    transition: transform 1s ease;
+  }
+
+  .movies:hover .movies-pct,
+  .movies-one:hover .movies-one-pct,
+  .movies--one:hover .movies--one--pct,
+  .movies-big:hover .movies-big-pct {
+    transform: scale(1.07);
+  }
+}
+
+/* Buttons */
+.red-btn,
+.four-btnn {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ff0000, #7a0000);
+
+  transition:
+    transform 0.9s ease,
+    box-shadow 0.9s ease;
+}
+
+/* Button shine */
+.red-btn::before,
+.four-btnn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -160%;
+  width: 45%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: skewX(-25deg);
+  transition: 1.8s ease;
+}
+
+.red-btn:hover::before,
+.four-btnn:hover::before {
+  left: 170%;
+}
+
+/* Button hover */
+@media (min-width: 992px) {
+
+  .red-btn:hover,
+  .four-btnn:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+      0 0 20px rgba(255, 0, 0, 0.4),
+      0 0 50px rgba(255, 0, 0, 0.2);
+  }
+}
+
+/* Titles */
+.main-title,
+.movies-title,
+.title5 {
+  transition: 0.6s ease;
+}
+
+@media (min-width: 992px) {
+
+  .main-title:hover,
+  .movies-title:hover,
+  .title5:hover {
+    text-shadow:
+      0 0 10px rgba(255, 0, 0, 0.7),
+      0 0 30px rgba(255, 0, 0, 0.4);
+  }
+}
+
+/* Navbar animation */
+.navbar .item {
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.navbar .item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #ff0000;
+  transition: 0.6s ease;
+}
+
+.navbar .item:hover::after {
+  width: 100%;
+}
+
+/* Logo */
+.site-logo {
+  transition: 0.7s ease;
+}
+
+@media (min-width: 992px) {
+
+  .site-logo:hover {
+    transform: scale(1.08) rotate(-3deg);
+
+    filter:
+      drop-shadow(0 0 10px rgba(255, 0, 0, 0.7));
+  }
+}
+
+/* Background glow */
+body::before {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 0, 0, 0.08);
+  filter: blur(120px);
+  top: -180px;
+  left: -180px;
+  z-index: -1;
+
+  animation: cinemaGlow 10s ease-in-out infinite alternate;
+}
+
+@keyframes cinemaGlow {
+
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(120px, 80px);
+  }
+}
+
+/* Mobile safe */
+@media (max-width: 991px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .movies:hover,
+  .movies-one:hover,
+  .movies--one:hover,
+  .movies-big:hover,
+  .red-btn:hover,
+  .four-btnn:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  body::before {
+    width: 250px;
+    height: 250px;
+    filter: blur(80px);
+  }
+}
+/* ========================= */
+/* MOBILE HORIZONTAL SCROLL */
+/* ========================= */
+
+@media (max-width: 991px) {
+
+  /* Horizontal scroll lists */
+  .movies-hero,
+  .movies--hero,
+  .movies-one-hero,
+  .movies--one--hero,
+  .movies-big-hero {
+    display: flex;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 15px;
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    padding-bottom: 10px;
+  }
+
+  /* Scrollbar hidden */
+  .movies-hero::-webkit-scrollbar,
+  .movies--hero::-webkit-scrollbar,
+  .movies-one-hero::-webkit-scrollbar,
+  .movies--one--hero::-webkit-scrollbar,
+  .movies-big-hero::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Cards */
+  .movies,
+  .movies-one,
+  .movies--one,
+  .movies-big {
+    flex: 0 0 auto;
+    width: 220px !important;
+    max-width: 220px !important;
+
+    transform: none !important;
+  }
+
+  /* Images */
+  .movies-pct,
+  .movies-one-pct,
+  .movies--one--pct,
+  .movies-big-pct {
+    width: 100%;
+    border-radius: 14px;
+  }
+
+  /* Hover OFF */
+  .movies:hover,
+  .movies-one:hover,
+  .movies--one:hover,
+  .movies-big:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
