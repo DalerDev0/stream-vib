@@ -1356,3 +1356,135 @@ body {
   margin: 0;
   transition: 0.6s linear;
 }/*# sourceMappingURL=main.css.map */
+/* ========================= */
+/* BOX SHADOW ANIMATIONS */
+/* ========================= */
+
+/* Desktop uchun shadow animatsiya */
+@media (min-width: 992px) {
+
+  .card1,
+  .mobile,
+  .plan1,
+  .faq-item,
+  .start-wrapper,
+  .navbar-copiya,
+  .header-intro,
+  .four-wrapper,
+  .hero-wrapper,
+  .img1 {
+    transition: all 0.4s ease;
+  }
+
+  /* Cards */
+  .card1:hover {
+    transform: translateY(-10px);
+    box-shadow:
+      0 0 20px rgba(229, 0, 0, 0.5),
+      0 0 40px rgba(229, 0, 0, 0.3);
+  }
+
+  /* Devices section */
+  .mobile:hover {
+    transform: translateY(-8px);
+    box-shadow:
+      0 0 25px rgba(255, 255, 255, 0.15),
+      0 0 50px rgba(229, 0, 0, 0.2);
+  }
+
+  /* Pricing plans */
+  .plan1:hover {
+    transform: scale(1.03);
+    box-shadow:
+      0 0 25px rgba(229, 0, 0, 0.5),
+      0 0 60px rgba(229, 0, 0, 0.25);
+  }
+
+  /* FAQ */
+  .faq-item:hover {
+    transform: translateX(5px);
+    box-shadow:
+      0 0 20px rgba(255, 255, 255, 0.08),
+      0 0 40px rgba(229, 0, 0, 0.15);
+  }
+
+  /* Trial section */
+  .start-wrapper:hover {
+    box-shadow:
+      0 0 30px rgba(229, 0, 0, 0.35),
+      0 0 70px rgba(229, 0, 0, 0.2);
+  }
+
+  /* Header */
+  .header-intro:hover {
+    box-shadow:
+      0 0 20px rgba(255, 255, 255, 0.05);
+  }
+
+  /* Buttons */
+  .strat-btn:hover,
+  .four-btn:hover,
+  .four-btnn:hover,
+  .plan-btn:hover,
+  .start-btn:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 0 20px rgba(229, 0, 0, 0.5),
+      0 0 40px rgba(229, 0, 0, 0.3);
+  }
+
+  /* Social icons */
+  .img1:hover {
+    transform: rotate(5deg) scale(1.1);
+    box-shadow:
+      0 0 15px rgba(229, 0, 0, 0.4);
+  }
+
+  /* Navbar items */
+  .navbar .item:hover,
+  .navbar-copiya .item:hover {
+    text-shadow:
+      0 0 10px rgba(229, 0, 0, 0.8),
+      0 0 20px rgba(229, 0, 0, 0.5);
+  }
+}
+
+
+/* ========================= */
+/* MOBILE & TABLET SAFE */
+/* ========================= */
+
+/* Mobil va planshetda layout buzilmasligi uchun */
+@media (max-width: 991px) {
+
+  .card1,
+  .mobile,
+  .plan1,
+  .faq-item,
+  .start-wrapper,
+  .img1,
+  .strat-btn,
+  .four-btn,
+  .four-btnn,
+  .plan-btn,
+  .start-btn {
+    box-shadow:
+      0 0 10px rgba(229, 0, 0, 0.15);
+  }
+
+  /* Hover transformlarni o‘chiradi */
+  .card1:hover,
+  .mobile:hover,
+  .plan1:hover,
+  .faq-item:hover,
+  .start-wrapper:hover,
+  .img1:hover,
+  .strat-btn:hover,
+  .four-btn:hover,
+  .four-btnn:hover,
+  .plan-btn:hover,
+  .start-btn:hover {
+    transform: none;
+  }
+}
+
