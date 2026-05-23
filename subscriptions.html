@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <header
@@ -332,6 +333,16 @@
         </div>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      // ENG MUHIM TO'G'RILANGAN JOYI: 
+      // Planshet va Mobil qurilmalarda (ekran kengligi 992px dan kichik bo'lsa) AOS o'chadi.
+      // Bu orqali mobil versiyada o'ngga-chapga skrol butunlay yo'qoladi, menyu va linklar benuqson ishlaydi.
+      AOS.init({
+        once: true,
+        disable: window.innerWidth < 992
+      });
+    </script>
 
     <script src="./main.js"></script>
   </body>

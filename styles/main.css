@@ -1356,3 +1356,37 @@ body {
   margin: 0;
   transition: 0.6s linear;
 }/*# sourceMappingURL=main.css.map */
+
+
+/* ==========================================================================
+   MOBILDA GORIZONTAL SKROLLNI (O'NGGA-CHAPGA SILJISHNI) BUTUNLAY YO'QOTISH
+   ========================================================================== */
+
+/* Butun sahifani qamrab oluvchi asosiy wrapper va bo'limlarni ekran kengligiga majburlash */
+html,
+body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+.big-wrapper,
+section,
+footer {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  /* Chetga chiqib ketgan har qanday ortiqcha elementni qirqib tashlaydi */
+  box-sizing: border-box !important;
+}
+
+/* Katta bloklar ichidagi paddinglar ekran kengligini buzmasligi uchun xavfsizlik */
+.container {
+  width: 100% !important;
+  max-width: 1200px;
+  /* Loyihangizdagi container kengligi qancha bo'lsa o'shani yozing */
+  margin: 0 auto;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  box-sizing: border-box !important;
+}
